@@ -9,6 +9,6 @@
 
 ## Créditos 
 
-  ***Autor:*** Carlos Castillo
- ***Ciclo:*** II
-  ***Periodo Académico:*** Abril 2020-Agosto 2020
+***Autor:*** Carlos Castillo
+***Ciclo:*** II
+***Periodo Académico:*** Abril 2020-Agosto 2020
