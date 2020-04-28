@@ -2,9 +2,9 @@
 # Programación Orientada a Objetos (POO)
  Repositorio que contiene las actividades de aprendiaje desarrolladas durante el estudio de la Asignatura de **Programación Orientada a Objetos (POO)** de la carrera de Ciencias de la Computación de la [Universidad Técnica Particular de Loja](https://www.utpl.edu.ec.).
  
- El repositorio se organiza en una carpeta "Poo_2020" la cual contiene todas las practicas y deberes desarrollados en NetBeans.
+ El repositorio se organiza en una carpeta "poo_2020" la cual contiene todas las practicas y deberes desarrollados en NetBeans.
  
- * **Poo_2020:** Practicas y deberes desarrollados en NetBeans
+ * **poo_2020:** Practicas y deberes desarrollados en NetBeans
 
 
 ## Créditos 
