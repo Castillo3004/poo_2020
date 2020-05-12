@@ -7,12 +7,9 @@ public class Cuenta_bancaria {
     private String nombre_del_socio ;
     
     public Long get_numero_de_cuenta(){
-    return numero_de_cuenta;
+         return numero_de_cuenta;
     }
-    /**
-     * Método para establecer el valor de la velocidad en el atributo velocidad
-     * @param n_cuenta
-     */
+
     public void set_numero_de_cuenta(Long n_cuenta){
         if(n_cuenta > 0){
             numero_de_cuenta = n_cuenta ;
@@ -39,5 +36,4 @@ public class Cuenta_bancaria {
     public void set_nombre_del_socio(String n_socio) {
         nombre_del_socio = n_socio;
     }
-    
 }

@@ -5,7 +5,7 @@ public class Ejecutar_cuenta_bancaria {
     
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        //creacion de objeto a partir de la clase Cuenta_bancaria 
+
         Cuenta_bancaria cuentaB1 = new Cuenta_bancaria();
         System.out.println("CUENTA BANCARIA N°1\n===================");
         System.out.print("Ingrese el número de cuenta: "); 

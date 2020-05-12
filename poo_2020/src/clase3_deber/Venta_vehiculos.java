@@ -1,7 +1,6 @@
 package clase3_deber;
 
 public class Venta_vehiculos {
-    
     private float precio_vehiculo;
     private int año_fabricacion; 
     private String marca ;
@@ -9,12 +8,9 @@ public class Venta_vehiculos {
     private String placa;
     
     public float get_precio_vehiculo(){
-    return precio_vehiculo;
+        return precio_vehiculo;
     }
-    /**
-     * Método para establecer el valor de la velocidad en el atributo velocidad
-     * @param p_vehiculo
-     */
+
     public void set_precio_vehiculo(float p_vehiculo){
         if(p_vehiculo > 0){
             precio_vehiculo = p_vehiculo;
@@ -23,7 +19,7 @@ public class Venta_vehiculos {
         }
     }
 
-    public float get_año_fabricacion(){
+    public int get_año_fabricacion(){
         return año_fabricacion;
     }
 
