@@ -1,0 +1,71 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que imprima el costo de un pedido de un artículo del cual
+	se tiene la descripción, la cantidad pedida y el precio unitario. Si la cantidad pedida
+	excede de 50 unidades, se hace un descuento de 15%.
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Articulo 
+	Entradas -> Descripcion
+				Cantidad
+				Precio Unitario
+				
+	Procesos -> Precio Total = (precio unitario * cantidad) 
+				Si cantidad > 50 entonces precio total * 0.15
+				 
+	Salidas -> 	Presentar: descripción, cantidad, precio total
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO CALCULAR EL PRECIO DE UN PEDIDO 
+		
+			Clase Pedido 
+			1. Declarar Datos 
+				descripción: Cadena
+				cantidad: Entero 
+				precio_unitario: Real 
+				precio_total : Real 
+			2. Método establecerDescripcion(descripción: Cadena) 
+				a. descripción = descripción		
+				b. Fin Metodo establecerDescripcion
+			3. Metodo establecerCantidad(cantidad: Entero )
+				a. cantidad = cantidad
+				b. Fin Metodo establecerCantidad
+			4. Metodo establecerPrecioUnitario(precio_unitario : Real )
+				a. precio_unitario = precio_unitario
+				b. Fin Metodo establecerPrecioUnitario
+			6. Metodo calcularPrecioTotal()
+				a. if cantidad > 50 then 
+					precio_total = (cantidad * precio_unitario) * 0.15
+				b. else
+					precio_total = (cantidad * precio_unitario)
+				c. endif 
+				d. Fin Metodo calcularPrecioTotal
+			7. Metodo obtenerPrecioTotal (): Real
+				a. Return calcularPrecioTotal
+				b. Fin Metodo obtenerPrecioTotal
+			8. Metodo obtenerDescripcion(): Cadena
+				a. Return descripción
+				b. Fin Metodo obtenerDescripcion
+			Fin Clase Pedido
+			
+			Clase EjecutaPedido
+				1. Método principal ()
+				a. Declarar variables 
+					descrip: Cadena
+					cantid: Entero
+					precio_u: Real 
+				b. Declarar, crear e iniciar objeto 
+					Pedido objPedido = new Pedido()
+				c. Solicitar Descripcion, cantidad, precio unitario
+				d. Leer descrip, cantid, precio_u
+				e. Establecer objPedido.establecerDescripcion(descrip)
+							  objPedido.establecerCantidad(cantid)
+							  objPedido.establecerPrecioUnitario(precio_u)
+				f. Calcular objPedido.calcularPrecioTotal()
+				g. Imprimir objPedido.obtenerPrecioTotal()
+				h. Fin Metodo principal
+			Fin Clase EjecutaPedido
+			
+		FIN

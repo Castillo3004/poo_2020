@@ -1,0 +1,134 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que permita hacer conversiones de temperaturas entre
+	grados Fahrenheit, Celsius, Kelvin y Rankine. Primero debe preguntar qué tipo
+	de grados quiere convertir. Por ejemplo: si se le indica que se desea convertir
+	una temperatura en grados Fahrenheit, debe leer la cantidad de grados y luego
+	calcular e imprimir su equivalente en grados Celsius, Kelvin y Rankine, y así debe
+	hacer lo mismo para cada uno de los otros tipos. Para convertir a Celsius a la
+	temperatura Fahrenheit se le resta 32 y se multiplica por 5/9. Para convertir a Kelvin,
+	se le suma 273 a los grados Celsius. Para convertir a Rankine a los grados
+	Fahrenheit se le suma 460.
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Temperatura 
+	Entradas -> Tipo Temperatura
+				Grados de Temperatura
+				
+	Procesos -> Caso 1 = Fahrenheit
+				Caso 2 = Celsius
+				Caso 3 = Kelvin
+				Caso 4 = Rankine
+				*Caso 1:
+					Celsius = (grados - 32)*(5/9)
+					Kelvin = Celsius + 273 
+					Rankine = grados + 460 
+				*Caso 2: 
+					Fahrenheit = (grados * 9/5)+32
+					Kelvin = grados +273
+					Rankine = (grados * 9/5)+491
+				*Caso 3: 
+					Fahrenheit = (grados -273)*9/5 +32 
+					Celsius = grados -273
+					Rankine = grados * 1.8 
+				*Caso 4:  
+					Fahrenheit = grados - 460 
+					Celsius = (grados - 491)* 5/9
+					Kelvin = grados * 5/9 
+					
+				 
+	Salidas -> 	Presentar: Conversion temperatura 1, conversion temperatura 2, conversoon temperatura 3 
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO CONVERTIR TIPOS DE TEMPERATURA
+		
+			Clase Temperatura 
+			1. Declarar Datos 
+				tipo_temp : Entero
+				grados: Real
+				 
+			2. Método establecerTipoTemp(tipo_temp: Entero) 
+				a. tipo_temp = tipo_temp 		
+				b. Fin Metodo establecerTipoTemp
+				
+			3. Metodo establecerFaC(grados: Real )
+				a. grados = (grados - 32)*(5/9)
+				b. Fin Metodo establecerFaC
+				
+			4. Metodo establecerFaK(grados: Real )
+				a. grados = establecerFaC + 273
+				b. Fin Metodo establecerFaK
+				
+			5. Metodo establecerFaR(grados: Real )
+				a. grados = grados + 460
+				b. Fin Metodo establecerFaR
+				
+			6. Metodo establecerCaF(grados: Real )
+				a. grados = (grados * 9/5)+32
+				b. Fin Metodo establecerCaF
+				
+			7. Metodo establecerCaK(grados: Real )
+				a. grados = grados +273
+				b. Fin Metodo establecerCaK
+				
+			8. Metodo establecerCaR(grados: Real )
+				a. grados = (grados * 9/5)+491
+				b. Fin Metodo establecerCaR
+				
+			9. Metodo establecerKaF(grados: Real )
+				a. grados = (grados -273)*9/5 +32
+				b. Fin Metodo establecerKaF
+				
+			10. Metodo establecerKaC(grados: Real )
+				a. grados = grados -273
+				b. Fin Metodo establecerKaC
+				
+			11. Metodo establecerKaR(grados: Real )
+				a. grados = grados * 1.8 
+				b. Fin Metodo establecerKaR
+				
+			12. Metodo establecerRaF(grados: Real )
+				a. grados = grados - 460 
+				b. Fin Metodo establecerRaF
+				
+			13. Metodo establecerRaC(grados: Real )
+				a. grados = (grados - 491)* 5/9
+				b. Fin Metodo establecerRaC
+				
+			14. Metodo establecerRaK(grados: Real )
+				a. grados = grados * 5/9 
+				b. Fin Metodo establecerRaK
+			
+			Fin Clase Temperatura
+			
+			Clase EjecutaTemperatura
+				1. Método principal ()
+				a. Declarar variables 
+					opc: Entero
+					grad: Real
+					Presentar: Cadena
+				b. Declarar, crear e iniciar objeto 
+					Temperatura objTemp = new Temperatura()
+				c. Solicitar Tipo de grados, grados
+				d. Leer opc, grad
+				e. Establecer x
+				g. Imprimir 
+					Switch(tipo_temp): 
+						*Case 1(Fahrenheit): 
+							Presentar = (objTemp.establecerFaC(grad) + objTemp.establecerFaK(grad) + objTemp.establecerFaR(grad))
+							Break
+						*Case 2 (Celsius): 
+							Presentar = (objTemp.establecerCaF(grad) + objTemp.establecerCak(grad) + objTemp.establecerCaR(grad))
+							Break 
+						*Case 3 (Kelvin): 
+							Presentar = (objTemp.establecerKaF(grad) + objTemp.establecerKaC(grad) + objTemp.establecerKaR(grad))
+							Break 
+						*Case 4 (Rankine): 
+							Presentar = (objTemp.establecerRaF(grad) + objTemp.establecerRaC(grad) + objTemp.establecerRaK(grad))
+							Break
+				h. Fin Metodo principal
+			Fin Clase EjecutaTemperatura
+			
+		FIN

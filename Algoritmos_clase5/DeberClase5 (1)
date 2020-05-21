@@ -1,0 +1,71 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo para calcular e imprimir el precio de un terreno del cual
+	 se tienen los siguientes datos: largo, ancho y precio por metro cuadrado. Si el
+	 terreno tiene más de 400 metros cuadrados se hace un descuento de 10 %.
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Terreno
+	Entradas -> largo
+				ancho
+				precio por metro cuadrado
+	Procesos -> tamaño terreno = (largo * ancho) 
+				precio terreno = tamaño terreno * precio metro cuadrado 
+				Si tamaño terreno es mayor a 400, precio terreno = (tamaño terreno * precio metro cuadrado) * (0.40) 
+	Salidas -> 	Presentar: tamaño_terr, precio_terr
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO CALCULAR EL PRECIO DE UN TERRENO
+		
+			Clase Terreno  
+			1. Declarar Datos 
+				largo: Real
+				ancho: Real 
+				precio_m: Real 
+				tamaño_terr: Real 
+				precio_terr: Real 
+			2. Método establecerLargoTerr(largo: Real) 
+				a. largo = largo 
+				b. Fin Metodo establecerLargoTerr
+			3. Metodo establecerAnchoTerr(ancho: Real)
+				a. ancho = ancho
+				b. Fin Metodo establecerAnchoTerr
+			4. Metodo establecerPrecioTerr(precio_m Real)
+				a. precio_m = precio_m
+				b. Fin Metodo establecerPrecioTerr
+			5. Metodo calcularTamaño()
+				a. tamaño_terr = largo * ancho
+				b. Fin Metodo calcularTamaño()
+			6. Metodo calcularPrecioTerr()
+				a. if tamaño_terr > 400 then 
+					precio_terr = (precio_terr * precio_m) * 0.10
+				b. else
+					precio_terr = (precio_terr* precio_m)
+				c. endif 
+				d. Fin Metodo calcularPrecioTerr
+			7. Metodo ObtenerPrecioTerr():Real
+				a. return precio_terr
+				b. Fin Metodo ObtenerPrecioTerr
+			Fin Clase Terreno
+			
+			Clase EjecutaTerreno 
+				1. Método principal ()
+				a. Declarar variables 
+					largo_t: Real 
+					ancho_t: Real 
+					precio_mt: Real 
+				b. Declarar, crear e iniciar objeto 
+					Terreno objTerreno = new Terreno()
+				c. Solicitar largo terreno, ancho terreno, precio por tamaño cuadrado
+				d. Leer largo_t, ancho_t, precio_mt
+				e. Establecer objTerreno.establecerAnchoTerr(ancho_t)
+							  objTerreno.establecerLargoTerr(largo_t)
+							  objTerreno.establecerPrecioTerr(precio_mt)
+				f. Calcular objTerreno.calcularPrecioTerr()
+				g. Imprimir objTerreno.obtenerPrecioTerr()
+				h. Fin Metodo principal
+			Fin Clase EjecutaTerreno
+			
+		FIN

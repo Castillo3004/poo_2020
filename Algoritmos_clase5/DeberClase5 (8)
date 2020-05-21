@@ -1,0 +1,76 @@
+1. PLANTEO DEL PROBLEMA
+
+	*De acuerdo con la clase de sus ángulos, los triángulos se clasifican en:
+		Rectángulo tiene un ángulo recto (igual a 90°)
+		Obtusángulo tiene un ángulo obtuso (mayor que 90° pero menor 180°)
+		Acutángulo los tres ángulos son agudos (menor que 90°)
+	Elaborar un algoritmo que permita leer el tamaño de los tres ángulos (A,B,C) de
+	un triángulo e imprima qué tipo es.
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Angulo
+	Entradas -> tamaño angulo A 
+				tamaño angulo B 
+				tramaño angulo C
+				
+	Procesos -> Si(tamaño angulo A OR tamaño angulo B OR tamaño angulo C es igual a 90)entonces 
+				tipo de triangulo es igual a Triangulo Rectangulo 
+				Sino(tamaño angulo A OR tamaño angulo B OR tamaño angulo C es mayor a 90 y menor a 180) entonces
+				tipo de triangulo es igual a Triangulo Obtusangulo 
+				Sino(tamaño angulo A y tamaño angulo B y tamaño angulo C es menor a 90) entonces 
+				tipo de triangulo es igual a Triangulo Acutangulo
+				 
+	Salidas -> 	Presentar: tipo de triangulo
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO DEFINIR TIPO DE TRIANGULO 
+		
+			Clase Angulo 
+			1. Declarar Datos 
+				Angulo_A: Real
+				Angulo_B: Real 
+				Angulo_C: Real 
+				Tipo_triangulo : Cadena 
+			2. Método establecerAnguloA(Angulo_A: Real) 
+				a. Angulo_A = Angulo_A	
+				b. Fin Metodo establecerAnguloA
+			3. Metodo establecerAnguloB(Angulo_B: Real )
+				a. Angulo_B = Angulo_B
+				b. Fin Metodo establecerAnguloB
+			4. Metodo establecerAnguloC(Angulo_C : Real )
+				a. Angulo_C = Angulo_C
+				b. Fin Metodo establecerAnguloC
+			5. Metodo definirTipoAngulo()
+				a. if (Angulo_A || Angulo_B || Angulo_C == 90) entonces 
+					Tipo_triangulo = "Triangulo Rectángulo"
+				b. if else(Angulo_A || Angulo_B || Angulo_C > 90 && < 180) entonces 
+					Tipo_triangulo = "Triangulo Obtusangulo"
+				c. if else(Angulo_A && Angulo_B && Angulo_C < 90) entonces 
+					Tipo_triangulo = "Triangulo Acutangulo"
+				d. Fin Metodo definirTipoAngulo
+			6. Metodo obtenerTipoAngulo():Cadena
+				a. return definirTipoAngulo
+				b. Fin Metodo obtenerTipoAngulo
+			Fin Clase Angulo
+			
+			Clase EjecutaAngulo	
+				1. Método principal ()
+				a. Declarar variables 
+					angA: Real
+					angB: Real
+					angC: Real 
+				b. Declarar, crear e iniciar objeto 
+					Angulo objAngulo = new Angulo()
+				c. Solicitar Angulo A, Angulo B, Angulo C 
+				d. Leer angA, angB, angC
+				e. Establecer objAngulo.establecerAnguloA(angA)
+							  objAngulo.establecerAnguloB(angB)
+							  objAngulo.establecerAnguloC(angC)
+				f. Calcular objAngulo.definirTipoAngulo()
+				g. Imprimir objAngulo.obtenerTipoAngulo()
+				h. Fin Metodo principal
+			Fin Clase EjecutaAngulo
+			
+		FIN

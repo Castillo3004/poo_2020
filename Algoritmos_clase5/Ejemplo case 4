@@ -1,0 +1,70 @@
+1. PLANTEO DEL PROBLEMA
+
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Empleado 
+	Entradas -> horas
+				cuota por hora 
+				nombre empleado
+	Procesos -> sueldo = horas * cuota 
+				sueldo = (40 * cuota )+((horas -40)*)(cuota * 2))
+	Salidas -> 	Presentar: nombre, sueldo
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO CALCULAR SUELDO DOBLE DE UN EMPLEADO 
+		
+			Clase Empleado 
+			1. Declarar Datos 
+				nombre: Cadena 
+				horas: Entero 
+				cuota: Real 
+				sueldo: Real 
+			2. Método establecerNombreEmp(nom: Cadena) 
+				a. nombre = nom 
+				b. Fin Metodo establecerNombreEmp
+			3. Metodo establecerHorasTrab(horas: Entero)
+				a. horas = horas
+				b. Fin Metodo establecerHorasTrab
+			4. Metodo establecerCuotaHora(cuota: Real)
+				a. cuota = cuota
+				b. Fin Metodo establecerCuotaHora
+			5. Metodo calcularSueldo()
+				a. if horas <= 40 then 
+					1. sueldo = horas * cuota 
+				b. else
+					1. sueldo = (40 * cuota )+((horas -40)*(cuota *2 ))
+				c. endif 
+				d. Fin Metodo calcularSueldo
+			6. Metodo obtenerNombreEmp():Cadena
+				a. return nombre
+				b. Fin Metodo obtenerNombreEmp
+			7. Metodo ObtenerSueldo():Real
+				a. return sueldo 
+				b. Fin Metodo ObtenerSueldo
+			Fin Clase Empleado
+			
+			Clase EjecutaEmpleado 
+				1. Método principal ()
+				a. Declarar variables 
+					nomEmp: Cadena 
+					hrsTra: Entero 
+					cuoHr: Real 
+				b. Declarar, crear e iniciar objeto 
+					Empleado objEmpleado = new Empleado()
+				c. Solicitar nombre, numero de horas trabajadas, cuota por hora
+				d. Leer nomEmp, hrsTra, cuoHr
+				e. Establecer objEmpleado.establecerNombreEmp(nomEmp)
+							  objEmpleado.establecerHorasTrab(hrsTra)
+							  objEmpleado.establecerCuotaHora(cuoHr)
+				f. Calcular objEmpleado.calcularSueldo()
+				g. Imprimir objEmpleado.obtenerNombreEmp()
+						    objEmpleado.obtenerSueldo()
+				h. Fin Metodo principal
+			Fin Clase EjecutaEmpleado
+			
+		FIN
+				
+		
+				
+				

@@ -1,0 +1,113 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que lea los datos de un estudiante (nombre y tres califi -
+	caciones parciales) e imprima el nombre y la calificación final de acuerdo a lo
+	siguiente: para aprobar el curso debe tener 70 o más en cada una de las tres
+	calificaciones, la calificación final será el promedio. En caso de haber reprobado
+	uno o más exámenes ordinarios, la calificación final será NA (No Acreditado).
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Articulo 
+	Entradas -> Nombre
+				Primera calificacion
+				Segunda calificacion
+				Tercera calificacion
+				Calificacion final
+				
+	Procesos -> Si (Primera Calificacion >= 70) entonces "aprobado"
+				Si (Segunda Calificacion >= 70) entonces "aprobado"
+				Si (Tercera Calificacion >= 70) entonces "aprobado"
+				Si (Primera Calificacion & Segunda Calificacion & Tercer Calificacion es diferente de aprobado entonces)
+				Calificacion Final = NA (No Acreditado) 
+				Sino 
+				Calificacion Final = (Primera Calificacion + Segunda Calificacion + Tercera Calificacion) / 3 
+				Fin si 
+				 
+	Salidas -> 	Presentar: Nombre, calificacion final
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO CALCULAR NOTA DE UN ESTUDIANTE
+		
+			Clase NotaEstudiante
+			1. Declarar Datos 
+				nombre: Cadena
+				primera_calificacion: Real
+				segunda_calificacion: Real 
+				tecera_calificacion: Real 
+				Prc : Booleano
+				Sgc : Booleano
+				Tcc: Booleano
+				calificacion_final: Real 
+			2. Método establecerNombre(nombre: Cadena) 
+				a. nombre = nombre		
+				b. Fin Metodo establecerDescripcion
+			3. Metodo establecerPrimeraCalificacion(primera_calificacion: Real )
+				a. primera_calificacion = primera_calificacion
+				b. Fin Metodo establecerPrimeraCalificacion
+			4. Metodo establecerSegundaCalificacion(segunda_calificacion: Real )
+				a. segunda_calificacion = segunda_calificacion
+				b. Fin Metodo establecerSegundaCalificacion
+			5. Metodo establecerTerceraCalificacion(tercera:calificacion: Real)
+				a. tercera_calificacion = tercera_calificacion
+				b. Fin Metodo establecerTerceraCalificacion
+			6. Metodo calcularPrc()
+				a. if (primera_calificacion > 70)  
+					Prc = True
+				b. else
+					Prc = False 
+				c. end if 
+				d. Fin Metodo calcularPrc
+			7. Metodo calcularSgc()
+				a. if (segunda_calificaciona > 70)  
+					Sgc = True
+				b. else
+					Sgc = False 
+				c. end if 
+				d. Fin Metodo calcularSgc
+			8. Metodo calcularTcc()
+				a. if (tercera_calificacion > 70)  
+					Tcc = True
+				b. else
+					Tcc = False 
+				c. end if 
+				d. Fin Metodo calcularTcc
+			9. Metodo calcularCalificacionFinal()
+				a. if (Prc && Tcc && Tcc != false)
+					calificacion_final = (primera_calificacion + segunda_calificacion + tercera_calificacion) / 3
+				b. else
+					imprimir ("NA (No Acreditado)")
+			10. Metodo obtenerCalificacionFinal(): Cadena
+				a. return calcularCalificacionFinal
+				b. Fin Metodo ObtenerCalificacionFinal
+			11. Metodo obtenerNombre(): Cadena
+				a. return nombre
+				b. Fin Metodo obtenerNombre
+			Fin Clase NotaEstudiante
+			
+			Clase EjecutaNotaEstudiante
+				1. Método principal ()
+				a. Declarar variables 
+					nom: Cadena
+					pri_c: Real
+					seg_c: Real
+					ter_c: Real 
+				b. Declarar, crear e iniciar objeto 
+					NotaEstudiante objCalificacion = new NotaEstudiante()
+				c. Solicitar nombre, primera calificacion, segunda calificacion, tercera calificacion
+				d. Leer nom, pri_c, seg_c,ter_c
+				e. Establecer objCalificacion.establecerNombre(nom)
+							  objCalificacion.establecerPrimeraCalificacion(pri_c)
+							  objCalificacion.establecerSegundaCalificacion(seg_c)
+							  objCalificacion.establecerTerceraCalificacion(ter_c)
+				f. Calcular objCalificacion.CalcularPrc();
+							objCalificacion.CalcularSgc();
+							objCalificacion.CalcularTcc();
+				            objCalificacion.calcularCalificacionFinal()
+				g. Imprimir objCalificacion.obtenerCalificacionFinal()
+							objCalificacion.obtenerNombre()
+				h. Fin Metodo principal
+			Fin Clase EjecutaNotaEstudiante
+			
+		FIN
