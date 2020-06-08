@@ -1,0 +1,64 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que permita leer un número N par y calcule e imprima la
+	suma de los números pares del 2 hasta el número leído. Si el número leído es
+	menor a 2 debe imprimir un mensaje de error.
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Numeros
+	
+	Entradas -> numeros
+				
+	Procesos -> Si el residuo de 2 es igual a 0, entonces suma par es igual a sumapar mas numeros
+				 
+	Salidas -> 	Suma pares
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO SUMA PARES	
+		
+			Clase SumaPares
+			1. Declarar Datos 
+				numeros: Entero
+				sumapar: Entero
+
+			2. Constructor EstabelcerNumeros(numeros: Entero) 
+				a. numeros = numeros	
+				b. saldo_inical = saldo_inical
+				b. Fin Constructor EstadoNumeros
+			3. Metodo CalculaPar()
+				a. Inicio if(numeros % 2 == 0) 
+				b. sumapar = sumapar + numeros;
+				b. Fin Metodo CalculaPar
+			4. Metodo ObtenerPar()
+				a. return sumapar;
+				b. Fin Metodo ObtenerPar
+		
+			Fin Clase EstadoCuenta
+			
+			Clase EjecutaSumaPares
+			
+				1. Método principal ()
+				a. Declarar variables 
+					num: Entero
+					aux: Entero
+					i: Entero					
+				c. Solicitar cantidad de numeros a digitar (aux) 
+				d. Crear Objeto
+					SumaPares objSumPar = new SumaPares()
+				d. Inicio For(i =0; i <aux; i++) 
+					Solicitar, calcular y establecer (num)
+				e. Inicio if(num<2)
+				f. Imprimir ERROR
+				g. Else 
+				h. Establecer y calcular objSumPar.EstabelcerNumeros()
+										 objSumPar.CalculaPar()
+				i. Fin If
+				j. Fin For
+				k. Imprimir objSumPar.ObtenerPar() 
+													
+				l. Fin Metodo principal
+				
+			Fin Clase EjecutaSumaPares
+			
+		FIN

@@ -1,0 +1,74 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Similar al Ejercicio 5.3.3.1, sólo que ahora se tienen 20 vendedores y al fi nal del
+	reporte debe imprimirse el nombre del vendedor que tuvo el mayor total de venta
+	y el del que tuvo el menor total de venta, suponiendo que no habrá cantidades
+	iguales de total de venta.
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Auto
+	Entradas -> nombre
+				precio automovil
+				
+	Procesos -> total venta = total venta + valor auto 
+				venta maxima = venta maxima total venta
+				Si total venta es mayor a venta maxima entonces mayor vendedor es igual a venta maxima
+				Si total venta es menor a venta maxima entonces menor vendedor es igual a venta minima
+				 
+	Salidas -> 	Presentar: mayor vendedor			
+						   menor vendedor 
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO SALDO DE CUENTA
+		
+			Clase Vendedor
+			1. Declarar Datos 
+				nombre: Cadena
+				
+			2. Metodo EstablecerNombre()
+				a. nombre = nombre
+				b. Fin Metodo EstablecerNombre
+				
+			3.	Metodo ObtenerNombre()
+				a. return Nombre
+				b. Fin Metodo ObtenerNombre
+				
+			Fin Clase Vendedor
+			
+			Clase EjecutaVendedor
+				1. Método principal ()
+				a. Declarar variables 
+					may_vend: Cadena
+					men_vend: Cadena
+					VentaMax: Real
+					v_auto: Real 
+					t_venta: Real 
+					aux: Entero
+					aux1: Entero	
+					aux2: Real
+				b. 	Crear Objeto
+						Vendedor objCompañia = new Vendedor()
+				c. Inicio While(aux ==1)
+				c. Solicitar nombre vendedor 
+				e. Inicio While(aux ==1)
+				f. Solicitar Valor de Auto vendido (v_auto) 
+				g. Calcular t_venta = t_venta + v_auto
+							ventaMax = ventaMax + t_venta
+							aux2 = ventaMax
+				h. Fin While
+				i. Inicio If(aux2 > VentaMax)
+				f. Establecer may_vend = objCompañia.ObtenerNombre()
+				j. Fin if
+				k. Inicio If(aux2 <VentaMax)
+				l. Establecer men_vend = objCompañia.ObtenerNombre()
+				m. Fin if
+				n. Obtener (aux) 
+				o. Imprimir may_vend
+							men_vend
+				
+				p. Fin Metodo principal
+			Fin Clase EjecutaVendedor
+			
+		FIN

@@ -1,0 +1,69 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que lea N números diferentes y calcule e imprima el mayor
+	 y el menor.
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Numeros
+	Entradas -> numeros
+				
+	Procesos -> Calcular numero mayor y menor de la lista de los numeros ingresados por teclado 
+				 
+	Salidas -> 	Presentar: numero mayor, numero menor
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO NUMERO MAYOR Y NUMERO MENOR 
+		
+			Clase MayorMenor
+			1. Declarar Datos 
+				numeros: Real
+				mayor: Real 
+				menor: Real 
+
+			3. Metodo CalculaMayorMenor()
+				a. Inicio if(numeros > mayor)
+				b. mayor = numeros
+				c. Fin If 
+				d. Inicio If (numeros < menor) 
+				e. menor = numeros 
+				f. Fin If
+				g. Fin Metodo CalculaMayorMenor
+
+			6. Metodo obtenerMayor()
+				a. return mayor
+				b. Fin Metodo obtenerMayor
+			7. Metodo obtenerMenor()
+				a. return menor 
+				b. Fin Metodo obtenerMenor
+			8. Metodo establecerNumeros(numeros :Real)
+				a. numeros = numeros 
+				b. Fin Metodo establecerNumeros
+				
+			Fin Clase MayorMenor
+			
+			Clase EjecutaMayorMenor
+				1. Método principal ()
+				a. Declarar variables 	
+					mayor: Cadena
+					menor: Cadena
+					num: Cadena	
+					aux: Entero
+					i :Entero		
+				b. Solicitar aux(Cuantos numero va a ingresar)
+				c. Crear Objeto
+					MayorMenor objMayMen = new MayorMenor()
+				d. Inicio For(i = 0; i < aux; i++)
+				e. Solicitar numeros							
+					Solicitar, calcular y establecer  objMayMen.establecerNumeros()
+													  objMayMen.CalculaMayorMenor()
+													  may = objMayMen.obtenerMayor()
+													  men = objMayMen.obtenerMenor() 
+				f. Fin For
+				g. Imprimir may 
+							men
+				h. Fin Metodo principal
+			Fin Clase EjecutaMayorMenor
+			
+		FIN

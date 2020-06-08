@@ -1,0 +1,65 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Realizar un programa en java que permita realizar una división entera, entre dos números 
+	enteros, dicha división se debe realizar a través de un proceso de restas repetitivas 
+    (consultar como dividir 2 números a través de restas repetitivas).
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos ->Division
+	
+	Entradas -> primer numero
+				segundo numero 
+				total 
+				
+	Procesos -> Ciclo repetitivo While
+					primer numero es igual a primer numero menos al segundo numero
+					total aumenta uno
+				 
+	Salidas -> 	Presentar: Resultado Division
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO DIVISION ENTERA
+		
+			Clase RestaRepetir
+			1. Declarar Datos 
+				numero1 : Entero	
+				numero2 : Entero 
+				total : Entero
+
+			2. Metodo CalculoDivision()
+				a. total = 0 
+				b. while(numero1 >= numero2)
+				c. numero1 = numero1- numero2
+				d. total = total + 1
+				e. Fin Metodo CalculoDivision
+			3. Metodo establecerNumero1(numero1 :Entero)
+				a. numero1 = numero1
+				b. Fin Metodo establecerNumero1
+			4. Metodo establecerNumero2(numero2 :Entero)
+				a. numero2 =numero2
+				b. Fin Metodo establecerNumero2
+			5. Metodo obtenerTotal()
+				a. return total
+				b. Fin Metodo obtenerTotal
+				
+			Fin Clase RestaRepetir
+			
+			Clase EjecutaRestaRepetir
+				1. Método principal ()
+				a. Declarar variables 
+					num1: Entero
+					num2: Entero
+									
+				b. Crear Objeto
+						RestaRepetir objDivResta = new RestaRepetir()
+				c. Solicitar num1 y num2 
+				d. Establecer objDivResta.establecerNumero1(num1)
+							  objDivResta.establecerNumero2(num2)	
+				d. Calcular objDivResta.CalculoDivision()
+				e. Imprimir objDivResta.obtenerTotal()	
+				f. Fin Metodo principal
+			Fin Clase EjecutaRestaRepetir
+			
+		FIN

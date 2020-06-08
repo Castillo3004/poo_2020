@@ -1,0 +1,109 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que imprima el siguiente reporte:
+							PRECIOS DE VENTA
+				COSTO DE P							PRECIO DE
+	ARTÍCULO 	PRODUCCIÓN 	UTILIDAD 	IMPUESTO 	VENTA
+	───────────────────────────────────────────────────────────────────
+	XXXXXXXXXX 	99,999.99 	99,999.99 	99,999.99 	999,999.99
+	XXXXXXXXXX 	99,999.99 	99,999.99 	99,999.99 	999,999.99
+	- 				- 			-		  	- 				-
+	XXXXXXXXXX 	99,999.99 	99,999.99 	99,999.99 	999,999.99
+	XXXXXXXXXX 	99,999.99 	99,999.99 	99,999.99 	999,999.99
+	TOTAL 999 	999,999.99 	999,999.99 	999,999.99 	9, 999,999.99
+	
+	Datos disponibles por cada artículo:
+	- Descripción
+	- Costo de producción
+	
+	Cálculos:
+	- Utilidad = 120 % del costo de producción
+	- Impuesto = 15 % (costo de producción + utilidad)
+	- Precio de venta = costo de producción + utilidad + impuesto
+	 
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Productos	
+	Entradas -> descripcion
+				costo produccion	
+				
+	Procesos -> utilidad = costo produccion *1.20 
+				impuesto = (costo produccion + utilidad )*0.85
+				precio venta = (costo produccion + utilidad + impuesto)
+				 
+	Salidas -> 	Presentar: descripcion, costo de produccion, utilidad, impuesto,precio venta, total costo produccion, total utilidad, total impuesto, total precio venta, total costo de produccion
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO COSTOS DE PRODUCTOS
+		
+			Clase Precio_venta
+			1. Declarar Datos 
+				descripcion: Cadena
+				costo_p: Real
+				utilidad: Real 
+				impuesto: Real 
+				precio_v: Real
+
+			2. Constructor Precios_venta(descripcion: Cadena,costo_p: Real) 
+				a. descripcion = descripcion	
+				b. costo_p = costo_p
+				b. Fin Constructor Precios_venta
+			3. Metodo CalculoUtilidad()
+				a. utilidad = costo_p *1.20
+				b. Fin Metodo CalculoUtilidad
+			4. Metodo CalculoImpuesto()
+				a. impuesto=(costo_p + utilidad)*0.85
+				b. Fin Metodo CalculoImpuesto
+			5. Metodo CalculoPrecioVenta()
+				a. precio_v = (costo_p+utilidad+impuesto)
+				b. Fin Metodo CalculoPrecioVenta
+			6. Metodo obtenerUtilidad()
+				a. return utilidad
+				b. Fin Metodo obtenerUtilidad
+			7. Metodo obtenerImpuesto()
+				a. return impuesto  
+				b. Fin Metodo obtenerImpuesto
+			8. Metodo obtenerPrecio_v()
+				a. return precio_v   
+				b. Fin Metodo obtenerPrecio_v
+			9. Metodo obtenerDescripcion()
+				a. return descripcion
+				b. Fin Metodo obtenerDescripcion
+			10. Metodo obtenerCosto_p
+				a. return costo_p
+				b. Fin Metodo ObtenerCosto_p
+				
+			Fin Clase Precios_venta
+			
+			Clase EjecutaPreciosVenta
+				1. Método principal ()
+				a. Declarar variables 
+					descrip: Cadena
+					cadena: Cadena
+					costo_pro Real
+					t_costo_p: Real 
+					t_utilidad: Real 
+					t_impuesto: Real 
+					t_precio_v: Real
+					op: Entero	
+				b. Inicio Do While{
+				c. Solicitar descripcion y costo de produccion
+				d. Crear Objeto
+					Precios_venta objVenta = new Precios_venta(descrip, costo_pro)
+				e. Calcular objVenta.CalculoImpuesto()
+							objVenta.CalculoUtilidad()
+							objVenta.CalculoPrecioVenta()
+				d. Establecer t_costo_p += objVenta.ObtenerCosto_p()
+							  t_utilidad += objVenta.obtenerUtilidad()
+							  objVenta += objVenta.obtenerImpuesto()
+							  objVenta += objVenta.obtenerPrecio_v()
+							  cadena += ( descrip,costo_pro,objVenta.obtenerUtilidad, objVenta.obtenerImpuesto, objVenta.obtenerPrecio_v
+				g. Imprimir Pregunta si desea ingresar otro producto 
+				f.Fin Do While(op == 0)
+				g. Imprimir cadena 
+							t_costo_p , t_utilidad,t_impuesto,t_utilidad,t_precio_v
+				h. Fin Metodo principal
+			Fin Clase EjecutaPreciosVenta
+			
+		FIN

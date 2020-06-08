@@ -1,0 +1,62 @@
+1. PLANTEO DEL PROBLEMA
+
+	* Realizar un programa en java que permita multiplicar 2 números enteros, dicha multiplicación, 
+	debe realizarse a través de un proceso de sumas repetitivas (consultar como multiplicar 2 números
+	enteros a través de sumas repetitivas).
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Multiplicacion
+	
+	Entradas -> primer numero
+				segundo numero
+				
+	Procesos -> Ciclo repetitivo For
+					total multiplicación = total multiplicacion + primer numero
+				 
+	Salidas -> 	Presentar: Producto de la multiplicacion
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO MULTIPLICA NUMEROS ENTEROS
+		
+			Clase MultiplicaEntero
+			1. Declarar Datos 
+				numero1 : Entero	
+				numero2 : Entero 
+				Total : Entero
+				i: Entero
+
+			2. Metodo CalculoMultiplicacion()
+				a. for(i=0; i < numero2; i++)
+				b. total = total + numero1;
+				b. Fin Metodo CalculoMultiplicacion
+			3. Metodo establecerNumero1(numero1 :Entero)
+				a. numero1 = numero1
+				b. Fin Metodo establecerNumero1
+			4. Metodo establecerNumero2(numero2 :Entero)
+				a. numero2 =numero2
+				b. Fin Metodo establecerNumero2
+			5. Metodo obtenerTotal()
+				a. return total
+				b. Fin Metodo obtenerTotal
+				
+			Fin Clase MultiplicaEntero
+			
+			Clase EjecutaMultiplicaEntero
+				1. Método principal ()
+				a. Declarar variables 
+					num1: Entero
+					num2: Entero
+									
+				b. Crear Objeto
+						MultiplicaEntero objNumeros = new MultiplicaEntero()
+				c. Solicitar num1 y num2 
+				d. Establecer objNumeros.establecerNumero1(num1)
+							  objNumeros.establecerNumero2(num2)	
+				d. Calcular objNumeros.CalculoMultiplicacion()
+				e. Imprimir objNumeros.obtenerTotal()	
+				f. Fin Metodo principal
+			Fin Clase EjecutaMultiplicaEntero
+			
+		FIN

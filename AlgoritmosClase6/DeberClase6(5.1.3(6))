@@ -1,0 +1,111 @@
+1. PLANTEO DEL PROBLEMA
+
+	*Elaborar un algoritmo que contabilice una cuenta de cheques. Al inicio se le
+	introduce el nombre del cuentahabiente y el saldo inicial. A continuación se pueden
+	hacer depósitos y retiros. Cuando sea depósito se incrementa al saldo y
+	cuando sea retiro se resta. Este programa terminará cuando ya no se desee
+	hacer movimientos. Se requiere la impresión del siguiente reporte:
+	
+							ESTADO DE CUENTA
+	CUENTAHABIENTE: XXXXXXXXXXXXXXXXXXXX
+	SALDO INICIAL: 99,999,999.99
+	MOVIMIENTO 				DEPÓSITO 		RETIRO 			SALDO
+	───────────────────────────────────────────────────────────────────
+	1 						999,999.99 						99,999,999.99
+	2 										999,999.99 		99,999,999.99
+	3 						999,999.99 						99,999,999.99
+	4 										999,999.99 		99,999,999.99
+	N
+	TOTALES 				9,999,999.99 	9,999,999.99 	999,999,999.99
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Cuenta	
+	Entradas -> nombre CuentaHabiente
+				Saldo inicial	
+				deposito 
+				retiro
+				
+	Procesos -> Saldo cuenta  = saldo cuenta + deposito +saldo inicial
+				Saldo cuenta = saldo cuenta - retiro - saldo inicial
+				 
+	Salidas -> 	Presentar: cuenta habiente, saldo inicial, depositos, retiros, total depositos, total retiros, saldo total
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	2. Pseufocodigo o miniespecficación(Algoritmo) 
+		ALGORITMO SALDO DE CUENTA
+		
+			Clase EstadoCuenta
+			1. Declarar Datos 
+				nombre: Cadena
+				saldo_inical: Real
+				deposito: Real 
+				retiro: Real 
+				actua_depos: Real
+
+			2. Constructor EstadoCuenta(nombre Cadena,saldo_inical: Real) 
+				a. nombre = nombre	
+				b. saldo_inical = saldo_inical
+				b. Fin Constructor EstadoCuenta
+			3. Metodo CalculoDeposito()
+				a. actua_depos = actua_depos + deposito + saldo_inical
+				b. Fin Metodo CalculoDeposito
+			4. Metodo CalculoRetiro()
+				a. actua_depos = actua_depos - retiro - saldo_inical
+				b. Fin Metodo CalculoRetiro
+			6. Metodo obtenerDeposito()
+				a. return actua_depos
+				b. Fin Metodo obtenerDeposito
+			7. Metodo obtenerRetiro()
+				a. return actua_depos 
+				b. Fin Metodo obtenerRetiro
+			8. Metodo establecerDeposito(deposito :Real)
+				a. deposito = deposito  
+				b. Fin Metodo establecerDeposito
+			9. Metodo establecerRetiro(retiro :Real)
+				a. retiro = retiro
+				b. Fin Metodo establecerRetiro
+			
+				
+			Fin Clase EstadoCuenta
+			
+			Clase EjecutaEstadoCuenta
+				1. Método principal ()
+				a. Declarar variables 
+					cuenta_ha: Cadena
+					cadena1: Cadena
+					cadena2: Cadena
+					saldo_ini: Real
+					dep: Real 
+					ret: Real 
+					total_d: Real 
+					total_r: Real
+					opc: Entero
+					opc2: Entero
+					i: Entero					
+				c. Solicitar cuentahabiente y saldo inicial
+				d. Crear Objeto
+					EstadoCuenta objCuenta = new EstadoCuenta(cuenta_ha, saldo_ini)
+				d. Inicio Do While
+				e. Imprimir (Preguntar por proceso que desea realizar)
+				f. Inicio if (opc2 ==1)
+					Solicitar, calcular y establecer  objCuenta.establecerDeposito()
+													  objCuenta.CalcularDeposito()	 
+													  objCuenta.obtenerDeposito()
+													  cadena1 = cadena1 +dep+objCuenta.obtenerDeposito()
+													  total_d = objCuenta.obtenerDeposito()
+				g. Else if (opc2 == 2) 
+					Solicitar, calcular y establecer  objCuenta.establecerRetiro()
+													  objCuenta.CalcularRetiro()	 
+													  objCuenta.obtenerRetiro()
+													  cadena2 = cadena2 +dep+objCuenta.obtenerRetiro()
+													  total_d = objCuenta.obtenerRetiro()
+				h. Imprimir Pregunta si desea realizar otro retiro o deposito 
+				i. Fin Do While(opc == 0) 
+				j. Imprimir cadena1
+							cadena2
+							total_d, total_r, (objCuenta.obtenerDeposito()+objCuenta.obtenerRetiro())
+				k. Fin Metodo principal
+			Fin Clase EjecutaEstadoCuenta
+			
+		FIN

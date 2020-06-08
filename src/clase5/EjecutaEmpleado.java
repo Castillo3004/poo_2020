@@ -17,7 +17,7 @@ public class EjecutaEmpleado {
         System.out.print("Ingrese el valor de la cuota por hora: ");
         cuota = sc.nextDouble();
         System.out.print("Ingrese el numero de horas trabajadas: ");
-        hora = teclado.nextInt();
+        hora = sc.nextInt();
         
         objEmpleado.setNombre(nombre);
         objEmpleado.setCuota(cuota);
