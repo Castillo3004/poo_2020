@@ -1,0 +1,40 @@
+1. PLANTEO DEL PROBLEMA
+
+	*El programa que tiene que realizar es un Terminal de Punto de Venta (TPV);  
+	para lo cual será necesario que revise, temas ya vistos como: el uso de datos tipo Objeto 
+	y Listas; a demás, investigue cómo utilizar el control lista de la librería swing de java 
+	(para poder mostrar la lista de productos disponibles), los requerimientos son los siguientes:
+	El programa debe presentar el menú de opciones:
+	1. Registrar stock de productos; se debe tener la posibilidad
+	de almacenar los productos en una lista. Los productos pueden 
+	ser de varios tipos: Comestibles, Utensilios, Oficina, Industriales.
+	2. Realizar venta; el programa debe permitir buscar un producto, verificando 
+	si existe en el stock ingresado previamente para poder agregarlo a la venta actual; 
+	y si existen; entonces se debe permitir  ingresar la cantidad de productos a vender. 
+	Tenga en cuenta, que en cada item agregado a la venta, se tiene que ir presentando
+	y actualizando: el subtotal, el iva generado y el total a pagar.
+	3. Salir.
+	
+2. ANALISIS DEL PROBLEMA 
+	Detectar Objetos -> Producto
+	
+	Entradas -> nombre
+				precio producto
+				cantidad 
+				
+	Procesos -> 1.- Crear una clase Padre 
+				2.- Crear archivos JFrame Form para la GUI
+				3.- Crear Metodos que permitan interactuar con la GUI, y para poder 
+					realizar diferentes operaciones que nos ayudaran a presentar el subtotal,
+					iva y Total.
+				 
+	Salidas -> 	Presentar: SubTotal
+						   IVA
+						   TOTAL
+
+3. DISEÑO DEL PROGRAMA 
+	1. Diagrama de Clase 
+	
+	
+	
+	
